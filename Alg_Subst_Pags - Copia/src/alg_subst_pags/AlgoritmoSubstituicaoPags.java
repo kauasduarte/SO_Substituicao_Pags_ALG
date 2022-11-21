@@ -131,16 +131,16 @@ public class AlgoritmoSubstituicaoPags {
         
     private static void MRU( ) {
         
-        //Criar um vetor com dados de contador de uso    
-        int usoPagina[] = {5,7,3,8,5,4,6,2,6,3};
+        //Criar um vetor com dados de tempo sem uso    
+        int usoPagina[] = {5,9,2,4,3,7,1,10,8,6};
 
-        //organizar as listas do menos usado para o mais usado
+        //organizar as listas do maior tempo sem uso para o menor tempo sem uso.
         int aux;
         String paux;
         for(int i=0; i<numPaginas; i++){
             for(int j=i+1; j<numPaginas; j++){
-                if(usoPagina[i]>usoPagina[j]){
-                    //organizar o vetor de uso em ordem crescente
+                if(usoPagina[i]<usoPagina[j]){
+                    //organizar o vetor de uso em ordem decrescente
                     aux=usoPagina[i];
                     usoPagina[i]=usoPagina[j];
                     usoPagina[j]=aux;
@@ -162,10 +162,11 @@ public class AlgoritmoSubstituicaoPags {
                 }  
             }
         }
-        //Substitui a pag de menor valor pela nova página
+        //Substitui a pag de maior valor pela nova página
         paginas[0]="X";
         referenciada[0]=0;
-        modificada[0]=0;       
+        modificada[0]=0;
+        usoPagina[0]=0;
     
     }
 
