@@ -3,7 +3,6 @@ package alg_subst_pags;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-//import java.util.stream.IntStream;
 
 public class AlgoritmoSubstituicaoPags {
     //Criar os dados das páginas e seus valores de referenciada ou modificada
@@ -171,8 +170,6 @@ public class AlgoritmoSubstituicaoPags {
     }
 
     public static void main(String[] args) {
-        
-        //AlgoritmoSubstituicaoPags obj = new AlgoritmoSubstituicaoPags();
         
         // Criar Switch Case para escolher qual será usada
         System.out.println("Informe o numero do algoritmo voce gostaria de utilizar: [1]NUR [2]FIFO [3]SC [4]CLOCK [5]MRU");
